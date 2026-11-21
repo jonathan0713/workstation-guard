@@ -1,0 +1,11 @@
+[Unit]
+Description=Notify if the workstation health monitor fails
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.local/share/workstation-guard/failure_notify.py
+TimeoutStartSec=5s
+NoNewPrivileges=yes
+MemoryMax=64M
+TasksMax=16
+UMask=0077

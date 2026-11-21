@@ -1,0 +1,11 @@
+[Unit]
+Description=Guarded workstation workloads (new jobs only)
+
+[Slice]
+CPUAccounting=yes
+MemoryAccounting=yes
+TasksAccounting=yes
+MemoryHigh=18G
+MemoryMax=22G
+MemorySwapMax=1G
+TasksMax=4096

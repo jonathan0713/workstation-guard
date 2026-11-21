@@ -1,0 +1,42 @@
+{
+  "sample_interval_seconds": 30,
+  "alerts": {
+    "consecutive_samples": 3,
+    "recovery_samples": 3,
+    "cooldown_seconds": 900
+  },
+  "thresholds": {
+    "cpu_temp_c": {
+      "warning": 85,
+      "critical": 95
+    },
+    "gpu_temp_c": {
+      "warning": 80,
+      "critical": 88
+    },
+    "nvme_temp_c": {
+      "warning": 70,
+      "critical": 80
+    },
+    "memory_available_bytes": {
+      "warning": 4294967296,
+      "critical": 2147483648
+    },
+    "disk_used_percent": {
+      "warning": 85,
+      "critical": 92
+    },
+    "psi_cpu_avg60": {
+      "warning": 20,
+      "critical": 40
+    },
+    "psi_memory_avg60": {
+      "warning": 5,
+      "critical": 15
+    },
+    "psi_io_avg60": {
+      "warning": 10,
+      "critical": 25
+    }
+  }
+}

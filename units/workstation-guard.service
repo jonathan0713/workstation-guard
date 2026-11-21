@@ -1,0 +1,18 @@
+[Unit]
+Description=Read-only workstation health monitoring and desktop alerts
+OnFailure=workstation-guard-failure.service
+Wants=workstation-workloads.slice
+After=workstation-workloads.slice
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.local/share/workstation-guard/monitor.py --once
+Nice=10
+IOSchedulingClass=idle
+MemoryMax=192M
+TasksMax=32
+TimeoutStartSec=25s
+NoNewPrivileges=yes
+UMask=0077
+StandardOutput=journal
+StandardError=journal
